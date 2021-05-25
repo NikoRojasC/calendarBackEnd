@@ -58,7 +58,7 @@ const actualizarEvento = async (req, res = response)=>{
         if( evento.user.toString() !== req.uid ){
             return res.status(401).json({
                 ok:false,
-                msg:"no puede editar este evento"
+                msg:"No tienes permiso de editar el evento"
             })
         }
         
@@ -101,7 +101,7 @@ const eliminarEvento = async(req, res= response) => {
         if( evento.user.toString() !== req.uid ){
             return res.status(401).json({
                 ok:false,
-                msg:"no puede editar este evento"
+                msg:"No tienes permiso de editar el evento"
             })
         }
         
